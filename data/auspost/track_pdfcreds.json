@@ -1,0 +1,9 @@
+{
+    "errors": [
+        {
+            "message": "The request failed authentication",
+            "error_code": "API_001",
+            "error_name": "Unauthenticated request"
+        }
+    ]
+}

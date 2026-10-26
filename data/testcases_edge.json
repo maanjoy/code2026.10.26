@@ -1,0 +1,123 @@
+{
+  "_note": "边界测试数据，结构与 data/orders.json 完全一致，用来证明业务逻辑是数据驱动的：换一份文件进来不用改一行代码。刻意覆盖了缺失 SKU 匹配 / 非法数量 / 查不到轨迹 / 目的地不完整四类情况（题目第 8 节要求）。数据为虚构，不含真实客户信息。",
+  "origin": {
+    "postcode": "2111",
+    "suburb": "RYDE",
+    "state": "NSW",
+    "country": "AU"
+  },
+  "tracking": {
+    "Track A": {
+      "number": "RBXZ50016112",
+      "courier": "StarTrack / Australia Post"
+    },
+    "Track B": {
+      "number": "999999999999",
+      "courier": "Unknown / 查不到"
+    },
+    "Track C": {
+      "number": "",
+      "courier": ""
+    }
+  },
+  "orders": [
+    {
+      "order_no": "PO-EDGE-0001",
+      "order_date": "05/12/25",
+      "status": "Draft",
+      "company": "Test Dispensary",
+      "customer": "Test Customer",
+      "phone": "0400 000 000",
+      "email": "tester@example.invalid",
+      "address": "1 Example Street, Sydney NSW 2000",
+      "suburb": "SYDNEY",
+      "state": "NSW",
+      "postcode": "2000",
+      "country": "AU",
+      "items": [
+        {
+          "sku": "TBAMET10",
+          "qty": 2,
+          "tracking": "Track A"
+        },
+        {
+          "sku": "SKU-NOT-IN-CATALOG",
+          "qty": 1,
+          "tracking": "Track A"
+        },
+        {
+          "sku": "TBAMET28",
+          "qty": 0,
+          "tracking": "Track A"
+        },
+        {
+          "sku": "TBOPAL28",
+          "qty": -3,
+          "tracking": "Track A"
+        },
+        {
+          "sku": "HARNIG",
+          "qty": "7",
+          "tracking": "Track A"
+        },
+        {
+          "sku": "MCMW10",
+          "qty": "two",
+          "tracking": "Track A"
+        },
+        {
+          "sku": "",
+          "qty": 1,
+          "tracking": "Track A"
+        }
+      ]
+    },
+    {
+      "order_no": "PO-EDGE-0002",
+      "order_date": "05/12/25",
+      "status": "Awaiting Tracking",
+      "company": "Test Dispensary 2",
+      "customer": "Second Tester",
+      "phone": "0411 111 111",
+      "email": "second@example.invalid",
+      "address": "22 Sample Road, Parramatta NSW 2150",
+      "suburb": "PARRAMATTA",
+      "state": "NSW",
+      "postcode": "2150",
+      "country": "AU",
+      "items": [
+        {
+          "sku": "LELCBD100",
+          "qty": 1,
+          "tracking": "Track B"
+        },
+        {
+          "sku": "HALGEO15",
+          "qty": 2,
+          "tracking": "Track B"
+        }
+      ]
+    },
+    {
+      "order_no": "PO-EDGE-0003",
+      "order_date": "05/12/25",
+      "status": "Missing Destination",
+      "company": "Test Dispensary 3",
+      "customer": "Third Tester",
+      "phone": "0422 222 222",
+      "email": "third@example.invalid",
+      "address": "33 Nowhere Lane",
+      "suburb": "",
+      "state": "NSW",
+      "postcode": "",
+      "country": "AU",
+      "items": [
+        {
+          "sku": "MCBO30",
+          "qty": 1,
+          "tracking": "Track C"
+        }
+      ]
+    }
+  ]
+}

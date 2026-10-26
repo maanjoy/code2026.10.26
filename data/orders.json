@@ -1,0 +1,101 @@
+{
+  "origin": {
+    "postcode": "2111",
+    "suburb": "RYDE",
+    "state": "NSW",
+    "country": "AU"
+  },
+  "tracking": {
+    "Track 1": {
+      "number": "2FWZ50008569",
+      "courier": "StarTrack / Australia Post"
+    },
+    "Track 2": {
+      "number": "2FWZ50008645",
+      "courier": "StarTrack / Australia Post"
+    },
+    "Track 3": {
+      "number": "305506914",
+      "courier": "TNT"
+    }
+  },
+  "orders": [
+    {
+      "order_no": "PO-20251130-00072",
+      "order_date": "30/11/25",
+      "status": "Completed",
+      "company": "Harbour Wellness Dispensary",
+      "customer": "Alex Mercer",
+      "phone": "0400 000 001",
+      "email": "alex.mercer@example.com.au",
+      "address": "Unit 4, 88 Sample Street, South Yarra VIC 3141",
+      "suburb": "SOUTH YARRA",
+      "state": "VIC",
+      "postcode": "3141",
+      "country": "AU",
+      "items": [
+        {
+          "sku": "TBAMET10",
+          "qty": 3,
+          "tracking": "Track 1"
+        },
+        {
+          "sku": "TBAMET28",
+          "qty": 1,
+          "tracking": "Track 1"
+        },
+        {
+          "sku": "TBOPAL28",
+          "qty": 1,
+          "tracking": "Track 1"
+        },
+        {
+          "sku": "HARNIG",
+          "qty": 4,
+          "tracking": "Track 1"
+        },
+        {
+          "sku": "LELCBD100",
+          "qty": 6,
+          "tracking": "Track 1"
+        }
+      ]
+    },
+    {
+      "order_no": "PO-20251203-00046",
+      "order_date": "03/12/25",
+      "status": "In Transit",
+      "company": "Riverside Botanical Dispensary",
+      "customer": "Priya Raman",
+      "phone": "0400 000 002",
+      "email": "priya.raman@example.com.au",
+      "address": "Suite 2, 15 Example Parade, Fitzroy VIC 3065",
+      "suburb": "FITZROY",
+      "state": "VIC",
+      "postcode": "3065",
+      "country": "AU",
+      "items": [
+        {
+          "sku": "AURPUR10",
+          "qty": 10,
+          "tracking": "Track 2"
+        },
+        {
+          "sku": "HALGEO15",
+          "qty": 1,
+          "tracking": "Track 3"
+        },
+        {
+          "sku": "MCMW10",
+          "qty": 2,
+          "tracking": "Track 3"
+        },
+        {
+          "sku": "MCBO30",
+          "qty": 3,
+          "tracking": "Track 3"
+        }
+      ]
+    }
+  ]
+}

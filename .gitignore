@@ -1,0 +1,40 @@
+# 本仓库的 .gitignore：凭证、依赖、构建产物一律不入库
+
+# ---- 凭证与安全 ----
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+secrets.json
+
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# ---- Node / 前端构建 ----
+node_modules/
+frontend/dist/
+frontend/dist-ssr/
+.vite/
+*.local
+
+# ---- 编辑器 / 系统 ----
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# ---- 日志 ----
+*.log
+
+# ---- 开发辅助脚本的产物（截图 / 临时响应 / puppeteer 依赖）----
+tools/tmp/
+tools/.chrome-profile/
+.chrome-shot/

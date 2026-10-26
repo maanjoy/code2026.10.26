@@ -1,0 +1,19 @@
+{
+  "name": "aeris-frontend",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Aeris 订单核算看板（Vue 3 + Vite），只调用本地后端 API，不持有任何 partner 凭证",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "vue": "^3.4.27"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.0.4",
+    "vite": "^5.2.11"
+  }
+}

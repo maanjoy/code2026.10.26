@@ -1,0 +1,137 @@
+{
+  "_note": "按题目「You may generate multiple test orders as reasonable assumptions」生成的测试订单，结构与 data/orders.json 完全一致（同一份 origin / tracking / items 结构），用于验证换一批数据进来不用改代码。所有公司、姓名、电话、邮箱、地址均为虚构（邮箱统一用保留域名 example.com.au），运单号为占位值：AusPost testbed 对任意单号都返回同一份样例轨迹，见 README §7.11。",
+  "origin": {
+    "postcode": "2111",
+    "suburb": "RYDE",
+    "state": "NSW",
+    "country": "AU"
+  },
+  "tracking": {
+    "Track 4": {
+      "number": "2FWZ50008712",
+      "courier": "StarTrack / Australia Post"
+    },
+    "Track 5": {
+      "number": "2FWZ50008803",
+      "courier": "StarTrack / Australia Post"
+    },
+    "Track 6": {
+      "number": "2FWZ50008897",
+      "courier": "StarTrack / Australia Post"
+    },
+    "Track 7": {
+      "number": "305507881",
+      "courier": "TNT"
+    }
+  },
+  "orders": [
+    {
+      "order_no": "PO-20251208-00118",
+      "order_date": "08/12/25",
+      "status": "Completed",
+      "company": "Botanica Compounding",
+      "customer": "Amelia Hart",
+      "phone": "0403 221 908",
+      "email": "amelia.hart@example.com.au",
+      "address": "88 George Street, Sydney NSW 2000",
+      "suburb": "SYDNEY",
+      "state": "NSW",
+      "postcode": "2000",
+      "country": "AU",
+      "items": [
+        {
+          "sku": "GROOGKU10",
+          "qty": 2,
+          "tracking": "Track 4"
+        },
+        {
+          "sku": "ENCBGBS30",
+          "qty": 1,
+          "tracking": "Track 4"
+        },
+        {
+          "sku": "GROWAFB10",
+          "qty": 4,
+          "tracking": "Track 4"
+        },
+        {
+          "sku": "FLW0011",
+          "qty": 2,
+          "tracking": "Track 4"
+        }
+      ]
+    },
+    {
+      "order_no": "PO-20251210-00127",
+      "order_date": "10/12/25",
+      "status": "In Transit",
+      "company": "Northshore Cannabis Clinic",
+      "customer": "Daniel Okafor",
+      "phone": "0412 664 375",
+      "email": "d.okafor@example.com.au",
+      "address": "240 Queen Street, Brisbane City QLD 4000",
+      "suburb": "BRISBANE",
+      "state": "QLD",
+      "postcode": "4000",
+      "country": "AU",
+      "items": [
+        {
+          "sku": "NUBKIKP10",
+          "qty": 3,
+          "tracking": "Track 5"
+        },
+        {
+          "sku": "WLFLO015",
+          "qty": 2,
+          "tracking": "Track 5"
+        },
+        {
+          "sku": "HALGEO15",
+          "qty": 2,
+          "tracking": "Track 6"
+        },
+        {
+          "sku": "MCMW10",
+          "qty": 5,
+          "tracking": "Track 6"
+        },
+        {
+          "sku": "MCBO30",
+          "qty": 1,
+          "tracking": "Track 6"
+        }
+      ]
+    },
+    {
+      "order_no": "PO-20251212-00134",
+      "order_date": "12/12/25",
+      "status": "Completed",
+      "company": "Harbour Wellness Pharmacy",
+      "customer": "Priya Raman",
+      "phone": "0425 810 442",
+      "email": "priya.raman@example.com.au",
+      "address": "108 St Georges Terrace, Perth WA 6000",
+      "suburb": "PERTH",
+      "state": "WA",
+      "postcode": "6000",
+      "country": "AU",
+      "items": [
+        {
+          "sku": "LELCBD100",
+          "qty": 4,
+          "tracking": "Track 7"
+        },
+        {
+          "sku": "AURPUR10",
+          "qty": 6,
+          "tracking": "Track 7"
+        },
+        {
+          "sku": "HARNIG",
+          "qty": 3,
+          "tracking": "Track 7"
+        }
+      ]
+    }
+  ]
+}

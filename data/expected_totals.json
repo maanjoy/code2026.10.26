@@ -1,0 +1,86 @@
+{
+  "_note": "仅供测试比对，禁止写进业务逻辑。金额单位：AUD，整数分参与运算。",
+  "orders": [
+    {
+      "order_no": "PO-20251130-00072",
+      "lines": [
+        {
+          "sku": "TBAMET10",
+          "qty": 3,
+          "rrp_incl_gst": 99.0,
+          "unit_price_ex_gst": 90.0,
+          "line_subtotal_ex_gst": 270.0
+        },
+        {
+          "sku": "TBAMET28",
+          "qty": 1,
+          "rrp_incl_gst": 199.0,
+          "unit_price_ex_gst": 180.91,
+          "line_subtotal_ex_gst": 180.91
+        },
+        {
+          "sku": "TBOPAL28",
+          "qty": 1,
+          "rrp_incl_gst": 199.0,
+          "unit_price_ex_gst": 180.91,
+          "line_subtotal_ex_gst": 180.91
+        },
+        {
+          "sku": "HARNIG",
+          "qty": 4,
+          "rrp_incl_gst": 149.0,
+          "unit_price_ex_gst": 135.45,
+          "line_subtotal_ex_gst": 541.8
+        },
+        {
+          "sku": "LELCBD100",
+          "qty": 6,
+          "rrp_incl_gst": 140.0,
+          "unit_price_ex_gst": 127.27,
+          "line_subtotal_ex_gst": 763.62
+        }
+      ],
+      "subtotal_ex_gst": 1937.24,
+      "gst": 193.72,
+      "shipment_fee": 0.0,
+      "total": 2130.96
+    },
+    {
+      "order_no": "PO-20251203-00046",
+      "lines": [
+        {
+          "sku": "AURPUR10",
+          "qty": 10,
+          "rrp_incl_gst": 99.0,
+          "unit_price_ex_gst": 90.0,
+          "line_subtotal_ex_gst": 900.0
+        },
+        {
+          "sku": "HALGEO15",
+          "qty": 1,
+          "rrp_incl_gst": 110.0,
+          "unit_price_ex_gst": 100.0,
+          "line_subtotal_ex_gst": 100.0
+        },
+        {
+          "sku": "MCMW10",
+          "qty": 2,
+          "rrp_incl_gst": 129.0,
+          "unit_price_ex_gst": 117.27,
+          "line_subtotal_ex_gst": 234.54
+        },
+        {
+          "sku": "MCBO30",
+          "qty": 3,
+          "rrp_incl_gst": 99.0,
+          "unit_price_ex_gst": 90.0,
+          "line_subtotal_ex_gst": 270.0
+        }
+      ],
+      "subtotal_ex_gst": 1504.54,
+      "gst": 150.45,
+      "shipment_fee": 0.0,
+      "total": 1654.99
+    }
+  ]
+}
