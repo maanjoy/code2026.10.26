@@ -38,3 +38,6 @@ Thumbs.db
 tools/tmp/
 tools/.chrome-profile/
 .chrome-shot/
+
+# ---- 过程文档（取数交接单 / 讲解稿）：不是交付物，不随仓库提交 ----
+docs/

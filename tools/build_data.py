@@ -80,7 +80,7 @@ def main():
     orders = {
         "origin": {
             "postcode": "2111",
-            "suburb": "RYDE",       # 注意：AusPost testbed 里 RYDE 只认 2112，见 docs/HANDOFF.md
+            "suburb": "RYDE",       # 注意：AusPost testbed 里 RYDE 只认 2112，见 README §7
             "state": "NSW",
             "country": "AU",
         },

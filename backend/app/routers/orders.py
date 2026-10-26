@@ -74,7 +74,7 @@ async def get_tracking(
     refresh: bool = Query(False, description="跳过缓存重新请求 partner API"),
     repo: OrderRepository = Depends(repository),
 ) -> Dict[str, Any]:
-    """独立查询某个运单号：给前端用，也方便手工验证 HANDOFF 3.1 的三个单号。"""
+    """独立查询某个运单号：给前端用，也方便手工验证题目给出的三个运单号。"""
     settings = get_settings()
     group = shipment_service.ShipmentGroup(
         label="adhoc",

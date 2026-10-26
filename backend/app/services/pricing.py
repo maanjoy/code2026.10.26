@@ -1,6 +1,6 @@
 """纯金额计算：不认识 SKU、不认识订单号，只认 Decimal。
 
-规则（来自 docs/HANDOFF.md 第 5 节）：
+规则（见 README §3 金额口径与舍入）：
     Ex-GST 单价   = RRP / (1 + GST 税率)
     行小计        = Ex-GST 单价 × 数量          （单价先舍入到分，再乘数量）
     Subtotal      = Σ 行小计

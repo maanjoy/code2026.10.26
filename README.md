@@ -654,9 +654,6 @@ aeris/
 │  ├─ orders_generated.json     自造的 3 笔测试订单（直接进首页）
 │  ├─ testcases_edge.json       故意造坏的边界数据集（只进测试链路）
 │  └─ sku_catalog.json 等       698 条 SKU 目录与取数过程的派生数据
-├─ docs/
-│  ├─ HANDOFF.md                取数实测记录与实现交接（接口细节、字段名、坑）
-│  └─ INTERVIEW.md              10 分钟讲解稿与追问应答
 ├─ .env.example                 只有变量名，无值
 ├─ .gitignore                   含 .env
 └─ README.md
@@ -813,7 +810,7 @@ aeris/
 |---|---|
 | `.env`（本机真实值） | 已被 `.gitignore` 排除，**不入库** |
 | `.env.example` | 只保留变量名，值全部留空 |
-| README / `docs/` | 只写变量名与占位符（`<...>`），不写真值 |
+| README | 只写变量名与占位符（`<...>`），不写真值 |
 | `backend/app/config.py` | `AUSPOST_BASE_URL` 有代码默认值（AusPost 公开的 testbed 地址），凭证本身无默认值 |
 | `frontend/` | 不接触任何凭证，只打本地 `/api` |
 

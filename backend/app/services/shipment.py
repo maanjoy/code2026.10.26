@@ -3,7 +3,7 @@
 运费**不使用任何写死的公式**，一律 POST /prices/shipments 拿 partner 报价；
 轨迹一律 GET /track。两者超时 / 非 2xx 时进入明确降级态，并把原因透给前端。
 
-分组规则（HANDOFF 6 节）：运费和轨迹按 **Track** 分组，不是按订单。
+分组规则：运费和轨迹按 **Track** 分组，不是按订单。
 订单 2 的 4 个 SKU 分属 Track 2 和 Track 3，所以它是两票货。
 """
 
@@ -217,7 +217,7 @@ def _price_body(origin: Origin, destination: Destination, items: List[Dict[str, 
 def base_origin(dataset_origin: Dict[str, Any], settings: Settings) -> Origin:
     """起运地：优先数据文件（数据驱动），环境变量只作为纠偏覆盖。
 
-    背景见 HANDOFF 3.2：题目给的 2111(Ryde) 在 AusPost testbed 里配不上，
+    背景见 README §7：题目给的 2111(Ryde) 在 AusPost testbed 里配不上，
     `suburb=RYDE&postcode=2111` 会 400，但 `GLADESVILLE`/`2111` 可以。
     """
     return Origin(

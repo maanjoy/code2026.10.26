@@ -1,6 +1,6 @@
 """Australia Post / StarTrack testbed 客户端。
 
-以 docs/HANDOFF.md 第 3 节为准：
+接口细节为本机实测结论（见 README §4）：
   * Base URL : <AUSPOST_BASE_URL>，默认值见 config.py
   * 认证     : HTTP Basic（username = API Key，password = Password）
   * 额外头部 : `account-number: <账号号>`（缺了会 400）
@@ -164,7 +164,7 @@ def _collect_events(raw_events: Iterable[Any]) -> List[TrackingEvent]:
 
 
 def parse_tracking(tracking_id: str, payload: Dict[str, Any]) -> TrackingInfo:
-    """兼容 HANDOFF 3.1 提到的两种响应结构：
+    """兼容实测到的两种响应结构：
 
     A. tracking_results[].consignment{status, events[]}（多件包裹）
     B. tracking_results[].{status, trackable_items[].{article_id, product_type,
@@ -246,7 +246,7 @@ def _walk_dicts(node: Any) -> Iterable[Dict[str, Any]]:
 def parse_address_lookup(payload: Dict[str, Any]) -> Dict[str, Any]:
     """宽松解析 GET /address 的响应。
 
-    HANDOFF 只记录了"返回 found: true/false + 候选 suburb 列表"，没有固定的
+    实测只记录了"返回 found: true/false + 候选 suburb 列表"，没有固定的
     字段名契约，所以这里不做硬编码假设：递归找出 `found` 布尔值，并收集任何
     带 suburb / locality / name 的候选值。解析不出来就当作 unresolved，
     由上层回退到数据文件里的 origin，而不是臆造结果。

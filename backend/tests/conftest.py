@@ -27,7 +27,7 @@ LIVE_PRICE_GST = "6.46"
 
 
 def live_price_payload(total: str = LIVE_PRICE_TOTAL, ex_gst: str = LIVE_PRICE_EX_GST, gst: str = LIVE_PRICE_GST) -> Dict[str, Any]:
-    """HANDOFF 3.2 记录的真实 shipment_summary 数值。"""
+    """实测记录的真实 shipment_summary 数值。"""
     return {
         "shipments": [
             {

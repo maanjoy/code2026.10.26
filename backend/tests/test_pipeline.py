@@ -127,7 +127,7 @@ async def test_degraded_shipping_is_explicit_and_excluded(monkeypatch, settings:
     assert order["shipment_mode"] == MODE_DEGRADED
     assert order["money"]["shipment_fee"] == "0.00"
     assert order["money"]["gst"] == "193.72"
-    assert order["money"]["total"] == "2130.96"  # 退化到 HANDOFF 第 5 节的 Shipment Fee = 0 口径
+    assert order["money"]["total"] == "2130.96"  # 退化到 Shipment Fee = 0 的降级口径（见 README §4）
     assert order["shipment_issues"], "降级必须给出可读原因"
     assert "HTTP_ERROR" in order["shipment_issues"][0]
     assert order["shipments"][0]["quote"]["http_status"] == 503
@@ -135,7 +135,7 @@ async def test_degraded_shipping_is_explicit_and_excluded(monkeypatch, settings:
 
 @pytest.mark.asyncio
 async def test_tracking_parses_both_response_shapes(monkeypatch, settings: Settings):
-    """HANDOFF 3.1：两种结构都要兼容，TNT 单号在 AusPost 侧也能查到。"""
+    """两种响应结构都要兼容，TNT 单号在 AusPost 侧也能查到。"""
     monkeypatch.setattr(orders_service, "AusPostClient", fake_live_factory)
     payload = await build_repository(settings).list_orders()
 

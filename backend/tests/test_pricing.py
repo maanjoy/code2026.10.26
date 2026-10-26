@@ -42,7 +42,7 @@ def order_lines(dataset, order_no: str, settings: Settings) -> List[dict]:
 
 @pytest.mark.parametrize("order_no", ["PO-20251130-00072", "PO-20251203-00046"])
 def test_matches_expected_totals(order_no, main_dataset, catalog, settings, expected):
-    """真实的 DB fixture 数据 + 业务计算出的数据必须等于 HANDOFF 给的参考值。"""
+    """真实的 DB fixture 数据 + 业务计算出的数据必须等于 `data/expected_totals.json` 里的参考值。"""
     rules = PricingRules(gst_rate=settings.gst_rate)
     baseline = expected[order_no]
 
