@@ -842,7 +842,3 @@ grep -rn "digitalapi.auspost" backend frontend data tools .env.example \
 
 `orders_generated.json` 与 `testcases_edge.json` 本来就是虚构数据。
 脱敏只换值、不动字段名与结构（数据驱动，§2.6），程序照跑。
-
-> 注意：**改数据只能保证新的提交干净**。若仓库曾以未脱敏状态推送过，
-> 旧提交里的 PII 需要用 `git filter-repo` 重写历史、或删除并重建仓库才能真正去掉——
-> GitHub 会保留被 force push 覆盖的旧对象，知道 commit SHA 的人仍可能访问到。
